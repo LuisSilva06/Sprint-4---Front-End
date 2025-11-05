@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import logo from "../assets/logo_brancaecolorida.svg";
 import futebol from "../assets/futebol.jpg";
 import corinthiansCampeao from "../assets/corinthians_campeao.jpg";
@@ -11,9 +11,17 @@ import workshop from "../assets/workshop.avif";
 import finalCamp from "../assets/final_camp_bra.avif";
 
 export default function Home() {
+  const [noticias, setNoticias] = useState([]);
   const carousels = useRef([]);
 
   useEffect(() => {
+    // 🔹 Carrega as notícias do JSON local
+    fetch("/src/data/noticias.json")
+      .then((res) => res.json())
+      .then((data) => setNoticias(data))
+      .catch((err) => console.error("Erro ao carregar notícias:", err));
+
+    // 🔹 Código original do carrossel
     carousels.current.forEach((carousel) => {
       if (!carousel) return;
       let isDown = false;
@@ -64,38 +72,29 @@ export default function Home() {
 
       {/* Conteúdo principal */}
       <main className="pt-14 px-4 max-w-4xl mx-auto">
-        {/* Últimas Notícias */}
+        {/* 🔹 Últimas Notícias (agora com JSON local) */}
         <section className="mt-3">
           <h2 className="text-sm font-bold text-[#5B0D7D] mb-2 border-l-4 border-[#D90429] pl-2">
             Últimas Notícias
           </h2>
 
           <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-3">
-            {[futebol, corinthiansCampeao, imagemBrasil].map((img, i) => (
+            {noticias.map((n) => (
               <div
-                key={i}
+                key={n.id}
                 className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-all"
               >
-                {/* Imagem padronizada e reduzida */}
                 <img
-                  src={img}
-                  alt="Notícia"
+                  src={n.imagem}
+                  alt={n.titulo}
                   className="w-full h-20 sm:h-24 md:h-24 object-cover"
                 />
                 <div className="p-2">
                   <h3 className="font-semibold text-[#5B0D7D] text-xs leading-tight">
-                    {i === 0
-                      ? "Brasil vence amistoso contra Argentina"
-                      : i === 1
-                      ? "Corinthians é campeão brasileiro"
-                      : "Marta renova contrato com Orlando Pride"}
+                    {n.titulo}
                   </h3>
                   <p className="text-[11px] text-gray-600 mt-1 leading-snug">
-                    {i === 0
-                      ? "Seleção feminina mostra força em jogo preparatório."
-                      : i === 1
-                      ? "Equipe feminina conquista título pela quarta vez."
-                      : "Craque brasileira permanece nos EUA por mais 2 anos."}
+                    {n.descricao}
                   </p>
                 </div>
               </div>

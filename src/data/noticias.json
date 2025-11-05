@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "titulo": "Brasil vence amistoso contra Argentina",
+    "descricao": "Seleção feminina mostra força em jogo preparatório.",
+    "imagem": "/src/assets/futebol.jpg"
+  },
+  {
+    "id": 2,
+    "titulo": "Corinthians é campeão brasileiro",
+    "descricao": "Equipe feminina conquista título pela quarta vez.",
+    "imagem": "/src/assets/corinthians_campeao.jpg"
+  },
+  {
+    "id": 3,
+    "titulo": "Marta renova contrato com Orlando Pride",
+    "descricao": "Craque brasileira permanece nos EUA por mais 2 anos.",
+    "imagem": "/src/assets/imagemBrasilFutebolFeminino.svg"
+  }
+]
