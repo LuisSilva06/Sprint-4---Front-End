@@ -1,16 +1,11 @@
-# React + Vite
+Passa a Bola – Projeto Front-End (Sprint 4)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+O Passa a Bola é um projeto desenvolvido como parte da Sprint 4, com o objetivo de criar uma aplicação front-end moderna, responsiva e dinâmica voltada ao universo esportivo. A proposta principal é oferecer uma interface intuitiva e interativa para os usuários, explorando boas práticas de design e usabilidade.
 
-Currently, two official plugins are available:
+O projeto foi construído utilizando o React em conjunto com o Vite, o que proporcionou um ambiente de desenvolvimento rápido e eficiente. Foram aplicados conceitos de componentização, estados e props, hooks, rotas com React Router e estilização modularizada.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Além disso, o projeto reforça o uso de HTML5, CSS3 e JavaScript (ES6+), bem como o versionamento de código com Git e GitHub. O resultado é uma aplicação escalável, organizada e de fácil manutenção, que demonstra a aplicação prática das tecnologias modernas do ecossistema front-end.
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Luis Gustavo RM:561672
+Kauan Benites RM:562115
+Mateus Nunes RM:562008
